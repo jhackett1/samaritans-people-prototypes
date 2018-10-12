@@ -1,0 +1,30 @@
+{% extends '../_layout.html' %}
+{% block content %}
+
+<div class="grid-3-columns">
+    <article class="main-content">
+        <p class="page-context">Create a new user</p>
+        <h1 class="page-title">Their branch</h1>
+
+        <form action="/admin/create-user-confirmed">
+             <div class="form-field">
+                <label for="branch">Their home branch</label><br/>
+                <select id="branch" required>
+                    <option>Birmingham</option>
+                    <option>Lichfeld</option>
+                    <option>Solihull</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="name">Their alias or display name</label><br/>
+                <input id="name" type="text" required>
+            </div>
+
+            <button class="button">Next</button>
+        </form>
+
+    </article>
+</div>
+
+{% endblock %}

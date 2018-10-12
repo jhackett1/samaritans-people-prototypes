@@ -1,3 +1,23 @@
+.page-context {
+  margin-top: 0px; }
+
+.button {
+  border: 0; }
+
+form label {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  display: inline-block;
+  color: #0f2522; }
+
+form input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  padding: 12px;
+  flex: 1;
+  width: 100%;
+  max-width: 400px; }
+
 .site-header__masthead--with-profile {
   padding: 12px 0px; }
   .site-header__masthead--with-profile .container {
@@ -14,11 +34,14 @@
   max-height: 40px;
   border-radius: 100%; }
 
+.site-header__user-actions {
+  margin-top: 15px; }
+
 .site-header__user-popup {
   position: absolute;
   background: white;
   padding: 15px;
-  width: 180px;
+  width: 190px;
   right: 0px;
   top: 45px;
   z-index: 999;
@@ -28,6 +51,13 @@
     margin: 5px 0px; }
   .site-header__user-popup.visible {
     display: block; }
+
+.tag {
+  background: #00a589;
+  color: white;
+  padding: 3px 7px;
+  font-size: 0.9em;
+  margin-right: 3px; }
 
 .phase-banner {
   background: none; }
@@ -46,18 +76,21 @@
     margin-bottom: 10px; }
   .hero .lede {
     margin-bottom: 30px; }
-  .hero form {
+
+.form-field {
+  margin-bottom: 25px; }
+  .form-field form {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 30px; }
-    .hero form input {
+    .form-field form input {
       border: none;
       font-size: 1.1em;
       padding: 12px;
       flex: 1; }
-    .hero form button {
+    .form-field form button {
       border: none; }
 
 .browse ul {

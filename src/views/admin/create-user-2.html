@@ -1,0 +1,31 @@
+{% extends '../_layout.html' %}
+{% block content %}
+
+<div class="grid-3-columns">
+    <article class="main-content">
+        <p class="page-context">Create a new user</p>
+        <h1 class="page-title">Their contact details</h1>
+
+        <form action="/admin/create-user-3">
+            <div class="form-field">
+                <label for="name">Their real name</label><br/>
+                <input id="name" type="text" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Their email</label><br/>
+                <input id="email" type="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="phone">Their contact phone number</label><br/>
+                <input id="phone" type="text" required>
+            </div>
+
+            <button class="button">Next</button>
+        </form>
+
+    </article>
+</div>
+
+{% endblock %}
