@@ -1,0 +1,41 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+<section class="hero">
+    <div class="grid-3-columns container">
+        <div class="main-content">
+            <h1 class="page-title">Manage your details, preferences and branch</h1>
+            <p class="lede">More information about the tool goes here</p>
+            <form action="/results">
+                <label class="visually-hidden" for="query">Search query</label>
+                <input id="query" type="text" placeholder="Search for people or branches"/>
+                <button class="button button--start">Search</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="browse">
+    <ul class="grid-3-columns">
+        <li class="panel">
+            <a href="/all-people"><h2>Browse people</h2></a>
+            <p>Look for people</p>
+        </li>
+
+        <li class="panel">
+            <a href="/all-branches"><h2>Browse branches</h2></a>
+            <p>Look for branches</p>
+        </li>
+
+        <li class="panel">
+            <a href="/all-regions"><h2>Browse regions</h2></a>
+            <p>Look for regions</p>
+        </li>
+    </ul>
+</section>
+
+
+
+    
+
+{% endblock %}

@@ -1,0 +1,72 @@
+.site-header__masthead--with-profile
+    padding: 12px 0px
+    .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+.site-header__user-profile
+    position: relative
+
+.site-header__user-avatar
+    max-width: 40px
+    max-height: 40px
+    border-radius: 100%
+    
+.site-header__user-popup
+    position: absolute
+    background: white
+    padding: 15px
+    width: 180px
+    right: 0px
+    top: 45px
+    z-index: 999
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1)
+    display: none
+
+    h3, p
+        margin: 5px 0px
+    &.visible
+        display: block
+
+.phase-banner
+    background: none
+    
+.hero
+    background-color:  #f4f7f8
+    width: 100vw
+    position: relative
+    left: 50%
+    right: 50%
+    margin-left: -50vw
+    margin-right: -50vw
+    margin-top: -50px
+    padding: 40px 0px 0px 0px
+
+    .page-title
+        margin-bottom: 10px
+
+    .lede
+        margin-bottom: 30px
+
+    form
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        margin-bottom: 30px
+        input
+            border: none
+            font-size: 1.1em
+            padding: 12px
+            flex: 1
+        button
+            border: none
+
+.browse ul
+    list-style-type: none
+    padding: 0
+
+    a, h2
+        color: #00a589
