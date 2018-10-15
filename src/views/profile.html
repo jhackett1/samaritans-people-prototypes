@@ -1,0 +1,95 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+<p class="page-context">Your profile</p>
+<h1 class="page-title">Namey McName</h1>
+
+<h2>Personal details</h2>
+<table class="volunteers-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Who can see</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Name</strong></td>
+            <td>Midlands</td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Display name</strong></td>
+            <td><span class="inactive">Not set</span></td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>mail@email.com</td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Phone</strong></td>
+            <td>0755 555 5555</td>
+            <td class="visibility-tag">Only my branch director</td>
+        </tr>
+        <tr>
+            <td><strong>Address</strong></td>
+            <td><span class="inactive">Not set</span></td>
+            <td class="visibility-tag">Only my branch director</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <a href="#" class="button button--start">Edit your details</a>
+    <a href="#" class="button button--outline">Change password</a>
+</p>
+
+<h2>Communication preferences</h2>
+<table class="volunteers-table">
+    <tbody>
+        <tr>
+            <td>Preferred communication methods</td>
+            <td>Email<br/>SMS</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Subscribed topics</td>
+            <td>Samaritans' fundraising<br/>
+            Samaritans' vital work
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    <a href="#" class="button">Edit your preferences</a>
+</p>
+
+
+<h2>Roles and memberships</h2>
+<p>Memberships give you extra permissions to match your role and responsibilities as a Samaritans volunteer. Contact a senior volunteer at your branch if you think you need extra permissions.</p>
+
+<ul class="grid-3-columns memberships">
+    <li class="panel">
+        <i class="fas fa-user"></i>
+        <h3>Volunteer</h3>
+        <p>You're an active Samaritans volunteer.</p>
+    </li>
+    <li class="panel">
+        <i class="fas fa-map-marked"></i> 
+        <h3>Birmingham branch</h3>
+        <p>You volunteer at Birmingham branch.</p>
+    </li>
+    <li class="panel">
+        <i class="fas fa-unlock-alt"></i>
+        <h3>Director</h3>
+        <p>You direct a Samaritans branch and can see extra information about volunteers at that branch.</p>
+    </li>
+</ul>
+
+
+
+{% endblock %}

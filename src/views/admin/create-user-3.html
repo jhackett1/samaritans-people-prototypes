@@ -1,27 +1,28 @@
 {% extends '../_layout.html' %}
 {% block content %}
 
+<a class="go-back" onclick="window.history.back();" href="#" >Go back</a>
+
 <div class="grid-3-columns">
     <article class="main-content">
         <p class="page-context">Create a new user</p>
-        <h1 class="page-title">Their branch</h1>
-
+        <h1 class="page-title">Their visibility</h1>
         <form action="/admin/create-user-confirmed">
-             <div class="form-field">
-                <label for="branch">Their home branch</label><br/>
-                <select id="branch" required>
-                    <option>Birmingham</option>
-                    <option>Lichfeld</option>
-                    <option>Solihull</option>
-                </select>
+
+            <div class="form-field">
+                <label for="name" class="form-label">Their display name</label><br/>
+                <p class="form-hint">If you give a display name, this user's real name will only be visible to senior volunteers at their branch.</p>
+                <input id="name" type="text" class="text-input">
             </div>
 
             <div class="form-field">
-                <label for="name">Their alias or display name</label><br/>
-                <input id="name" type="text" required>
+                <label for="hide-phone" class="form-label">Hide phone number?</label><br/>
+                <p class="form-hint">If you hide the user's phone number, it will only be visible to senior volunteers at their branch.</p>
+                <p class="form-hint">Email addresses are always visible.</p>
+                <input id="hide-phone" class="checkbox-input" type="checkbox">
             </div>
 
-            <button class="button">Next</button>
+            <button class="button">Confirm & finish</button>
         </form>
 
     </article>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/client.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/custom.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="client.js"></script>
+    <script src="/client.js"></script>
 </head>
 <body>
     <header class="site-header site-header--dark site-">
@@ -20,7 +20,7 @@
                     </a>
 
                     <div class="site-header__user-profile">
-                        <a href="#" class="site-header__user-link"><img class="site-header__user-avatar" src="http://placehold.it/80x80"/></a>
+                        <a href="#" class="site-header__user-link"><img class="site-header__user-avatar" src="https://placeimg.com/100/100/people"/></a>
                     
                         <div class="site-header__user-popup">
                             <h3>Namey McName</h3>
@@ -52,7 +52,7 @@
         </nav> #}
     </header>
 
-    <div class="phase-banner">
+    <div class="phase-banner {% block phaseClass %}{% endblock%}">
         <div class="container">
             <p class="phase-banner__message"><strong class="phase-banner__tag">Prototype</strong>This is a prototype of a brand new service.</p>
         </div>
@@ -66,11 +66,12 @@
     <footer class="site-footer">
         <div class="container">
             <ul class="site-footer__menu">
+                <li><a href="/" class="site-footer__menu-link">Normal view</a></li>
                 <li><a href="/admin" class="site-footer__menu-link">Admin view</a></li>
-                <li><a href="#" class="site-footer__menu-link">Accessibility</a></li>
+                {# <li><a href="#" class="site-footer__menu-link">Accessibility</a></li>
                 <li><a href="#" class="site-footer__menu-link">Feedback</a></li>
                 <li><a href="#" class="site-footer__menu-link">Privacy policy</a></li>
-                <li><a href="#" class="site-footer__menu-link">Legal</a></li>
+                <li><a href="#" class="site-footer__menu-link">Legal</a></li> #}
             </ul>
             <p class="site-footer__legal">
                 Samaritans is a charity registered in England and Wales (219432) and in Scotland (SC040604) and incorporated in England and Wales as a company limited by guarantee (757372). Samaritans Ireland is a charity registered in the Republic of Ireland (20033668) and incorporated in the Republic of Ireland as a company limited by guarantee (450409). Samaritans in Scotland is a charity registered in Scotland (SC009843) and incorporated as a Scottish Charitable Incorporated Organisation.

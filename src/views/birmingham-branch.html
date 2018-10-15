@@ -5,19 +5,132 @@
 <p class="page-context">Midlands region</p>
 <h1 class="page-title">Birmingham branch</h1>
 
-<section class="panel">
-    <p>
-        13 Bow St<br>
-        Birmingham<br>
-        B1 1DW
-    </p>
+<section class="key-volunteers grid-3-columns">
+    <aside>
+        <h2>Address</h2>
+        <p>
+            13 Bow St<br>
+            Birmingham<br>
+            B1 1DW
+        </p>
+        <p><a href="#">Directions</a></p>
+    </aside>
+
+    <div class="main-content">
+        <h2>Key contacts</h2>
+        <div class="grid-2-columns">
+            <div class="user-card">
+                <img src="https://placeimg.com/100/100/people?q=1" alt="User avatar" class="user-card__avatar"/>
+                <div>
+                    <p class="user-card__name"><a href="#">Namey McName</a></p>
+                    <p class="user-card__meta">Director</p>
+                </div>
+            </div>
+            <div class="user-card">
+                <img src="https://placeimg.com/100/100/people?q=2" alt="User avatar" class="user-card__avatar"/>
+                <div>
+                    <p class="user-card__name"><a href="/jane-volunteer">Jane Volunteer</a></p>
+                    <p class="user-card__meta">Deputy director, recruitment</p>
+                </div>
+            </div>
+            <div class="user-card">
+                <img src="https://placeimg.com/100/100/people?q=3" alt="User avatar" class="user-card__avatar"/>
+                <div>
+                    <p class="user-card__name"><a href="#">James Volunteer</a></p>
+                    <p class="user-card__meta">Deputy director, training</p>
+                </div>
+            </div>
+            <div class="user-card">
+                <img src="https://placeimg.com/100/100/people?q=4" alt="User avatar" class="user-card__avatar"/>
+                <div>
+                    <p class="user-card__name"><a href="#">Firstname Surname</a></p>
+                    <p class="user-card__meta">Trainer</p>
+                </div>
+            </div>
+            <div class="user-card">
+                <img src="https://placeimg.com/100/100/people?q=5" alt="User avatar" class="user-card__avatar"/>
+                <div>
+                    <p class="user-card__name"><a href="#">Firstname Surname</a></p>
+                    <p class="user-card__meta">Trainer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>All people</h2>
+
+<section class="table-controls">
+
+<form>
+    <label class="form-label" for="filter">Filter</label>
+    <select id="filter" class="select-input">
+        <option>All</option>
+        <option>Only active volunteers</option>
+        <option>Only potential volunteers</option>
+    </select>
+</form>
+
+<p class="volunteer-count">Showing 27 volunteers</p>
+
 </section>
 
 
-<h2>Key contacts</h2>
 
-
-<h2>All people</h2>
+<table class="volunteers-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Role</th>
+            <th>Phone number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#">Namey McName</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Director</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#">John Volunteer</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Listening volunteer</td>
+            <td>0755 555 5555</td>
+        </tr>
+        <tr>
+            <td><a href="/jane-volunteer">Jane Volunteer</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Deputy director, recruitment</td>
+            <td>0755 555 5555</td>
+        </tr>
+        <tr>
+            <td><a href="#">Janet Person</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Listening volunteer</td>
+            <td>0755 555 5555</td>
+        </tr>
+        <tr>
+            <td><a href="#">Namey McName</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Listening volunteer</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a href="#">John Volunteer</a></td>
+            <td><i class="fas fa-check"></i></td>
+            <td>Branch volunteer</td>
+            <td>0755 555 5555</td>
+        </tr>
+        <tr>
+            <td><a href="#">James Person</a></td>
+            <td><i class="rest"></i></td>
+            <td><span class="inactive">Inactive</span></td>
+            <td>0755 555 5555</td>
+        </tr>
+    </tbody>
+</table>
     
 
 {% endblock %}

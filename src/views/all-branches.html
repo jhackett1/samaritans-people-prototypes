@@ -1,0 +1,95 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+{# <p class="page-context">Midlands region</p> #}
+<h1 class="page-title">All branches</h1>
+
+<section class="table-controls">
+
+<form>
+    <label class="form-label" for="filter">Filter</label>
+    <select id="filter" class="select-input">
+        <option>All</option>
+        <option>Only permenant branches</option>
+        <option>Only temporary branches</option>
+    </select>
+</form>
+
+<p class="volunteer-count">Showing 10 of 202 branches</p>
+
+</section>
+
+
+<table class="volunteers-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Region</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="/birmingham-branch">Birmingham</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Solihull</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Lichfield</a></td>
+            <td>Midlands</td>
+        </tr>
+                <tr>
+            <td><a href="/birmingham-branch">Birmingham</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Solihull</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Lichfield</a></td>
+            <td>Midlands</td>
+        </tr>
+                <tr>
+            <td><a href="/birmingham-branch">Birmingham</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Solihull</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Lichfield</a></td>
+            <td>Midlands</td>
+        </tr>
+                <tr>
+            <td><a href="/birmingham-branch">Birmingham</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Solihull</a></td>
+            <td>Midlands</td>
+        </tr>
+        <tr>
+            <td><a href="/birmingham-branch">Lichfield</a></td>
+            <td>Midlands</td>
+        </tr>
+    </tbody>
+</table>
+
+<section class="pagination">
+    {# <a class="pagination__previous" href="#">Previous page</a> #}
+    <ul class="pagination__numbers">
+        <li><span href="#" class="pagination__number pagination__number--current">1</span></li>
+        <li><a href="#" class="pagination__number">2</a></li>
+        <li><a href="#" class="pagination__number">3</a></li>
+        <li><a href="#" class="pagination__number">4</a></li>
+        ...
+    </ul>
+    <a class="pagination__next" href="#">Next page</a>
+</section>
+    
+
+{% endblock %}

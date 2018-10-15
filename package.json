@@ -1,12 +1,11 @@
 {
-  "name": "samaritans-prototype-kit",
+  "name": "samaritans-people-prototypes",
   "version": "1.0.0",
   "description": "Samaritans Prototyping Kit",
   "main": "index.js",
   "scripts": {
     "start": "node src/utils/server.js",
-    "dev": "nodemon src/utils/server.js && gulp",
-    "build": "gulp"
+    "dev": "nodemon src/utils/server.js"
   },
   "keywords": [],
   "author": "",

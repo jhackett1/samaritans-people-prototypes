@@ -1,0 +1,104 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+<p class="page-context">Person</p>
+<h1 class="page-title">Jane Volunteer</h1>
+
+<div class="panel visibility-message">
+    <i class="icon fas fa-eye visibility"></i>
+    <p>Because you're the director of a branch <strong>Jane Volunteer</strong> is a member of, you can see details about them that aren't normally visible.</div>
+</div>
+
+<h2>Personal details</h2>
+<table class="volunteers-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Who can see?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Name</strong></td>
+            <td>Midlands</td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Display name</strong></td>
+            <td><span class="inactive">Not set</span></td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Email</strong></td>
+            <td>jane.volunteer@gmail.com</td>
+            <td class="visibility-tag">Everyone</td>
+        </tr>
+        <tr>
+            <td><strong>Phone</strong></td>
+            <td>0755 555 5555</td>
+            <td class="visibility-tag">Only Jane's branch director</td>
+        </tr>
+        <tr>
+            <td><strong>Address</strong></td>
+            <td><span class="inactive">Not set</span></td>
+            <td class="visibility-tag">Only Jane's branch director</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <a href="#" class="button button--start">Edit their details</a>
+    <a href="#" class="button button--outline">Reset their password</a>
+</p>
+
+<h2>Communication preferences</h2>
+<table class="volunteers-table">
+    <tbody>
+        <tr>
+            <td>Preferred communication methods</td>
+            <td>Email<br/>SMS</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Subscribed topics</td>
+            <td>Samaritans' fundraising<br/>
+            Samaritans' vital work
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    <a href="#" class="button">Edit their preferences</a>
+</p>
+
+
+<h2>Roles and memberships</h2>
+
+<ul class="grid-3-columns memberships">
+    <li class="panel">
+        <i class="fas fa-user"></i>
+        <h3>Volunteer</h3>
+        <p>Jane is an active Samaritans volunteer.</p>
+    </li>
+    <li class="panel">
+        <i class="fas fa-map-marked"></i> 
+        <h3>Birmingham branch</h3>
+        <p>Jane volunteers at Birmingham branch.</p>
+    </li>
+    <li class="panel">
+        <i class="fas fa-unlock-alt"></i>
+        <h3>Senior branch volunteer</h3>
+        <p>Jane is a senior volunteer at a branch, and can see extra information about people in that branch.</p>
+    </li>
+    <li class="panel">
+        <i class="fas fa-unlock-alt"></i>
+        <h3>Deputy director for recruitment</h3>
+        <p>Jane is a deputy director for recruitment at a branch.</p>
+    </li>
+</ul>
+
+
+
+{% endblock %}

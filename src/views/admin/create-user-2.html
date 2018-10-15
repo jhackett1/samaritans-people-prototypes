@@ -1,25 +1,46 @@
 {% extends '../_layout.html' %}
 {% block content %}
 
+<a class="go-back" onclick="window.history.back();" href="#" >Go back</a>
+
 <div class="grid-3-columns">
     <article class="main-content">
         <p class="page-context">Create a new user</p>
         <h1 class="page-title">Their contact details</h1>
-
         <form action="/admin/create-user-3">
             <div class="form-field">
-                <label for="name">Their real name</label><br/>
-                <input id="name" type="text" required>
+                <label for="name" class="form-label">Real name</label><br/>
+                <p class="form-hint">You can give them a display name later</p>
+                <input id="name" type="text" class="text-input" required>
             </div>
 
             <div class="form-field">
-                <label for="email">Their email</label><br/>
-                <input id="email" type="email" required>
+                <label for="email" class="form-label">Email</label><br/>
+                <input id="email" type="email" class="text-input" required>
             </div>
 
             <div class="form-field">
-                <label for="phone">Their contact phone number</label><br/>
-                <input id="phone" type="text" required>
+                <label for="phone" class="form-label">Phone number</label><br/>
+                <input id="phone" type="text" class="text-input" required>
+            </div>
+
+            <div class="form-field">
+                <label for="branch" class="form-label">Home branch</label><br/>
+                <select id="branch" class="select-input" required>
+                    <option>Aberdeen</option>
+                    <option>Aberystwyth</option>
+                    <option>Blackpool</option>
+                    <option>Brighton</option>
+                    <option>Birmingham</option>
+                    <option>Central london</option>
+                    <option>Greenwich</option>
+                    <option>Leicester</option>
+                    <option>Lichfeld</option>
+                    <option>Manchester</option>
+                    <option>Newbury</option>
+                    <option>Isle of Man</option>
+                    <option>Solihull</option>
+                </select>
             </div>
 
             <button class="button">Next</button>
