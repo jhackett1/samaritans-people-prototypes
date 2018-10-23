@@ -1,156 +1,147 @@
 {% extends '_layout.html' %}
 {% block content %}
 
-{# <p class="page-context">Midlands region</p> #}
-<h1 class="page-title">All people</h1>
-
-<section class="table-controls">
-
-<form>
-    <span>Filter:</span>
-
-    <select id="filter" class="select-input">
-        <option>All status</option>
-        <option>Only active volunteers</option>
-        <option>Only potential volunteers</option>
-    </select>
-
-    <select id="filter" class="select-input">
-        <option>All roles</option>
-        <option>Director</option>
-        <option>Deputy director</option>
-        <option>Listening volunteer</option>
-        <option>Branch volunteer</option>
-    </select>
-
-    <select id="filter" class="select-input">
-        <option>All branches</option>
-        <option>Aberdeen</option>
-        <option>Aberystwyth</option>
-        <option>Blackpool</option>
-        <option>Brighton</option>
-        <option>Birmingham</option>
-        <option>Central london</option>
-        <option>Greenwich</option>
-        <option>Leicester</option>
-        <option>Lichfeld</option>
-        <option>Manchester</option>
-        <option>Newbury</option>
-        <option>Isle of Man</option>
-        <option>Solihull</option>
-    </select>
-
-
-</form>
-
-<p class="volunteer-count">Showing 10 of 2400 people</p>
-
+<section class="page-header page-header--overlap">
+    <img class="page-header__pattern" src="/pattern.svg"/>
+    <div class="container">
+        <h1 class="page-header__title">Browse people</h1>
+    </div>
 </section>
 
+<main class="container">
 
 
-<table class="volunteers-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Role</th>
-            <th>Branch</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="/fiona-morris">Fiona Morris</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Branch volunteer</td>
-            <td>Birmingham</td>
-        </tr>
-        <tr>
-            <td><a href="#">Namey McName</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Director</td>
-            <td>Birmingham</td>
-        </tr>
-        <tr>
-            <td><a href="#">John Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Aberdeen</td>
-        </tr>
-        <tr>
-            <td><a href="#">Ellen Ripley</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Deputy director, recruitment</td>
-            <td>Solihull</td>
-        </tr>
-        <tr>
-            <td><a href="#">Janet Person</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Solihull</td>
-        </tr>
-        <tr>
-            <td><a href="#">Namey McName</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Bristol</td>
-        </tr>
-        <tr>
-            <td><a href="#">John Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Branch volunteer</td>
-            <td>Dundee</td>
-        </tr>
-        <tr>
-            <td><a href="#">James Person</a></td>
-            <td><i class="rest"></i></td>
-            <td><span class="inactive">Inactive</span></td>
-            <td>Edinburgh</td>
-        </tr>
-        <tr>
-            <td><a href="/jane-volunteer">Jane Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Deputy director, recruitment</td>
-            <td>Solihull</td>
-        </tr>
-        <tr>
-            <td><a href="#">Janet Person</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Solihull</td>
-        </tr>
-        <tr>
-            <td><a href="#">Namey McName</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Bristol</td>
-        </tr>
-        <tr>
-            <td><a href="#">John Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Branch volunteer</td>
-            <td>Dundee</td>
-        </tr>
-        <tr>
-            <td><a href="#">James Person</a></td>
-            <td><i class="rest"></i></td>
-            <td><span class="inactive">Inactive</span></td>
-            <td>Edinburgh</td>
-        </tr>
-    </tbody>
-</table>
+    <section id="key-people" class="all-people">
+            <section class="table-controls">
+                <form>
+                    <label class="form-label" for="filter">Filter</label>
+                    <select id="filter" class="select-input">
+                            <option>All status</option>
+                            <option>Only active volunteers</option>
+                            <option>Only potential volunteers</option>
+                        </select>
+                    
+                        <select id="filter" class="select-input">
+                            <option>All roles</option>
+                            <option>Director</option>
+                            <option>Deputy director</option>
+                            <option>Listening volunteer</option>
+                            <option>Branch volunteer</option>
+                        </select>
+                    
+                        <select id="filter" class="select-input">
+                            <option>All branches</option>
+                            <option>Aberdeen</option>
+                            <option>Aberystwyth</option>
+                            <option>Blackpool</option>
+                            <option>Brighton</option>
+                            <option>Birmingham</option>
+                            <option>Central london</option>
+                            <option>Greenwich</option>
+                            <option>Leicester</option>
+                            <option>Lichfeld</option>
+                            <option>Manchester</option>
+                            <option>Newbury</option>
+                            <option>Isle of Man</option>
+                            <option>Solihull</option>
+                        </select>
+                </form>
+                <p class="volunteer-count">Showing 27 volunteers</p>
+            </section>
+            
+            <table class="volunteers-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Role</th>
+                        <th>Phone number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td><a href="/fiona-morris">Fiona Morris</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Branch volunteer</td>
+                                <td>Birmingham</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Namey McName</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Director</td>
+                                <td>Birmingham</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">John Volunteer</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Listening volunteer</td>
+                                <td>Aberdeen</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Ellen Ripley</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Deputy director, recruitment</td>
+                                <td>Solihull</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Janet Person</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Listening volunteer</td>
+                                <td>Solihull</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Namey McName</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Listening volunteer</td>
+                                <td>Bristol</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">John Volunteer</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Branch volunteer</td>
+                                <td>Dundee</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">James Person</a></td>
+                                <td><i class="rest"></i></td>
+                                <td><span class="inactive">Inactive</span></td>
+                                <td>Edinburgh</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/jane-volunteer">Jane Volunteer</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Deputy director, recruitment</td>
+                                <td>Solihull</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Janet Person</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Listening volunteer</td>
+                                <td>Solihull</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Namey McName</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Listening volunteer</td>
+                                <td>Bristol</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">John Volunteer</a></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td>Branch volunteer</td>
+                                <td>Dundee</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">James Person</a></td>
+                                <td><i class="rest"></i></td>
+                                <td><span class="inactive">Inactive</span></td>
+                                <td>Edinburgh</td>
+                            </tr>
+                </tbody>
+            </table>
+        </section>
 
-<section class="pagination">
-    {# <a class="pagination__previous" href="#">Previous page</a> #}
-    <ul class="pagination__numbers">
-        <li><span href="#" class="pagination__number pagination__number--current">1</span></li>
-        <li><a href="#" class="pagination__number">2</a></li>
-        <li><a href="#" class="pagination__number">3</a></li>
-        <li><a href="#" class="pagination__number">4</a></li>
-        ...
-    </ul>
-    <a class="pagination__next" href="#">Next page</a>
-</section>
+</main>
     
 
 {% endblock %}

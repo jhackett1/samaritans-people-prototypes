@@ -1,0 +1,82 @@
+{% extends '_layout.html' %}
+{% block content %}
+
+<section class="page-header">
+    <img class="page-header__pattern" src="/pattern.svg"/>
+    <div class="container">
+        <p class="page-header__context">Initial training</p>
+        <h1 class="page-header__title">Your schedule</h1>
+        <aside class="page-header__panel">
+            <p>Course dates: <strong>16th October to 14th July 2019</strong></p>
+            <p>Venue: <strong>Birmingham branch</strong></p>
+        </aside>
+    </div>
+</section>
+
+<section class="page-navigation">
+    <ul class="page-navigation__list container">
+        <li class="page-navigation__list-item">
+            <a class="page-navigation__link" href="#key-people">Upcoming sessions</a>
+        </li>
+        <li class="page-navigation__list-item">
+            <a class="page-navigation__link" href="#all-people">Past sessions</a>
+        </li>
+        <li class="page-navigation__list-item">
+            <a class="page-navigation__link" href="#reports">Venue info</a>
+        </li>
+    </ul>
+</section>
+
+<main class="container">
+        <h2 class="section-title">Upcoming sessions</h2>
+        <section class="modules">
+            <table class="modules-table upcoming">
+                    <tr>
+                        <td>3</td>
+                        <td>Dealing with sensitive issues</td>
+                        <td>Online</td>
+                        <td><i class="fas fa-chevron-right"></i></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Having tough conversations</td>
+                        <td>16th February at 6pm</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Communicating effectively</td>
+                        <td>Online</td>
+                        <td></td>
+                    </tr>
+                </table>
+        </section>
+
+
+        <h2 class="section-title">Past sessions</h2>
+        <section class="modules">
+            <table class="modules-table">
+                    <tr>
+                        <td>1</td>
+                        <td>All about Samaritans</td>
+                        <td>Online</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Having tough conversations</td>
+                        <td>10th January at 6pm</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Communicating effectively</td>
+                        <td>Online</td>
+                        <td></td>
+                    </tr>
+                </table>
+        </section>
+
+</main>
+
+{% endblock %}

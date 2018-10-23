@@ -1,0 +1,54 @@
+{% extends '../_layout.html' %}
+{% block content %}
+
+<section class="page-header page-header--overlap">
+        <img class="page-header__pattern" src="/pattern.svg"/>
+        <div class="container">
+            <p class="page-header__context">Enroll on training</p>
+            <h1 class="page-header__title">Choose your course dates</h1>
+            <p class="page-header__lede">Each course is ten weekly, hour-long sessions.</p>
+        </div>
+    </section>
+
+<main class="content container">
+    <article class="course-dates">
+        <table>
+            <thead>
+                <th>
+                    Starts
+                </th>
+                <th>
+                    Ends
+                </th>
+                <th>
+                    Venue
+                </th>
+            </thead>
+            <tr>
+                <td>10th February 2019</td>
+                <td>16th March 2019</td>
+                <td>Birmingham branch</td>
+                <td><i class="fas fa-chevron-right"></i></td>
+            </tr>
+            <tr>
+                <td>20th January 2019</td>
+                <td>26th March 2019</td>
+                <td>Solihull branch</td>
+                <td><i class="fas fa-chevron-right"></i></td>
+            </tr>
+            <tr>
+                <td>30th February 2019</td>
+                <td>26th March 2019</td>
+                <td>Sutton Coldfield branch</td>
+                <td><i class="fas fa-chevron-right"></i></td>
+            </tr>
+        </table>
+
+        <a class="button button--secondary button--with-icon">See more dates <i class="fas fa-chevron-down"></i></a>
+
+    </article>
+</main>
+
+
+
+{% endblock %}

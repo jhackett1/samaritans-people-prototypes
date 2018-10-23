@@ -1,25 +1,35 @@
 {% extends '../_layout.html' %}
 {% block content %}
 
-<div class="grid-3-columns">
-    <article class="main-content">
-        <h1 class="page-title">Create a new user</h1>
-        <p class="lede">Use this form to create an account for a new volunteer joining Samaritans.</p>
+<section class="page-header page-header--overlap">
+        <img class="page-header__pattern" src="/pattern.svg"/>
+        <div class="container">
+            <h1 class="page-header__title">Create a new user</h1>
+            <p class="page-header__lede">Use this form to manually create an account for a new volunteer joining Samaritans.</p>
+        </div>
+    </section>
 
-        <p>Volunteers need an account to access the knowledgebase and other Samaritans services.</p>
+<main class="container">
+    <div class="grid-4-columns">
+            <article class="content">
+    
+                <p>Volunteers need an account to access Samaritans People, Learning and the knowledge base.</p>
+        
+                <p>You must only create accounts for current Samaritans volunteers.</p>    
+        
+                <blockquote class="inset">
+                    <p>We will store the personal information you provide and use it to communicate with the user about volunteering and other vital messages.</p>
+                    
+                    <p>The user can change their contact preferences after logging in.</p>
+                </blockquote>
+        
+                <a class="button button--start" href="/admin/create-user-2">Start</a>
+        
+        
+            </article>
+        </div>
+</main>
 
-        <p>You must only create accounts for current Samaritans volunteers.</p>    
 
-        <blockquote class="inset">
-            <p>We will store the personal information you provide and use it to communicate with the user about volunteering and other vital messages.</p>
-            
-            <p>The user can change their contact preferences after logging in.</p>
-        </blockquote>
-
-        <a class="button button--start" href="/admin/create-user-2">Start</a>
-
-
-    </article>
-</div>
 
 {% endblock %}

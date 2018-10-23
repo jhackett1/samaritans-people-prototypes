@@ -1,62 +1,320 @@
-// Colour scheme
-$palegreen: #9ab4bb
-$coregreen: #84bd00
-$brightgreen: #25a076
-$darkgreen: #175e66
-$lightgrey: #eaeaea
-$deepgreen: #18a489
+@import 'helpers'
 
-$offwhite: #f4f7f8
-$darkblue: #115e67
-$darkgrey: #0f2522
-$lightblue: #42b4d6
-
-
-// Page context above heading
-.page-context
-    font-size: 1.25em
-    opacity: 0.5
-    margin-bottom: 5px
-
-
-// Page title
-.page-title
-    font-size: 2.2em
-    margin: 0px 0px 50px 0px
-    color: $darkgrey
-    @media (min-width: 800px)
-        font-size: 2.7em
-
-
-// Lede
-.lede
-    font-size: 1.25em
-    font-weight: bold
-    color: $darkgrey
-
-
-// Grid helper classes
+// Grid
 .grid-2-columns
-    margin-bottom: 25px
-    @media (min-width: 700px)
+    @media (min-width: 800px)
         display: grid
         grid-template-columns: 1fr 1fr
-        grid-column-gap: 30px
+        grid-column-gap: 35px
+        grid-row-gap: 35px
 
 .grid-3-columns
-    margin-bottom: 25px
-    @media (min-width: 700px)
+    @media (min-width: 800px)
         display: grid
         grid-template-columns: 1fr 1fr 1fr
-        grid-column-gap: 30px
+        grid-column-gap: 35px
+        grid-row-gap: 35px
+        .content
+            grid-column: 1/3
 
 .grid-4-columns
-    margin-bottom: 25px
-    @media (min-width: 700px)
+    @media (min-width: 800px)
         display: grid
         grid-template-columns: 1fr 1fr 1fr 1fr
-        grid-column-gap: 30px    
+        grid-column-gap: 35px
+        grid-row-gap: 35px
+        .content
+            grid-column: 1/4
 
-.main-content
-    grid-column: 1 / 3
+.content
     background: white
+    padding: 20px
+    margin-bottom: 20px
+    &.content--transparent
+        background: none
+    @media (min-width: 800px)
+        padding: 40px
+        margin-bottom: 40px
+
+    p, ul
+        color: $darkestgreen
+        font-size: 1.15em
+        line-height: 1.45em
+        font-weight: normal
+        margin-bottom: 25px
+
+    .inset
+        margin: 45px 0px
+        border-left: 7px solid $darkgreen
+        padding-left: 30px
+        
+
+// Header
+.header
+    padding: 10px 0px
+    background: white
+
+.header__masthead
+    display: flex
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+
+.header__actions
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+.header__logo
+    width: 170px
+    max-width: 200px
+
+.header__user-avatar-link
+    text-decoration: none
+
+.header__user-avatar
+    width: 50px
+    max-width: 50px
+
+.header__app-switcher-link
+    text-decoration: none
+
+.header__app-switcher
+    width: 35px
+    margin-left: 10px
+    @media (min-width: 700px)
+        margin-left: 30px
+
+
+// Phase banner
+.phase-banner
+    background-color: lighten($lightblue, 40)
+    padding: 15px 0px 12px 0px
+
+.phase-banner__message
+    color: darken($lightblue, 30)
+    display: flex
+    margin: 0px
+
+.phase-banner__tag
+    background-color: $lightblue
+    color: white
+    display: inline-block
+    padding: 2px 5px
+    margin-right: 10px
+    font-size: 0.95em
+    align-self: flex-start
+    transform: translateY(-2px)
+
+
+// Footer
+.footer
+    background: white
+    padding-top: 25px
+    padding-bottom: 25px      
+
+.footer__menu
+    list-style: none
+    margin: 0
+    padding: 0
+
+.footer__menu-link
+    color: $darkgreen
+    text-decoration: none
+    margin-bottom: 10px
+
+.footer__legal
+    color: $grey
+
+// Page header
+.page-header
+    background-color: $darkgreen
+    width: 100%
+    position: relative
+    padding-top: 25px
+    padding-bottom: 25px
+    overflow: hidden
+    @media (min-width: 800px)
+        padding-top: 45px
+        padding-bottom: 45px
+
+.page-header__context
+    color: white
+    margin-bottom: 5px
+
+.page-header__title
+    font-size: 2em
+    margin-top: 0px
+    margin-bottom: 10px
+    z-index: 2
+    color: white
+    position: relative
+    @media (min-width: 800px)
+        font-size: 3em
+.page-header__lede
+    font-size: 1.15em
+    z-index: 2
+    color: white
+    position: relative
+    @media (min-width: 800px)
+        font-size: 1.3em
+
+.page-header__panel
+    margin-top: 20px
+    background: white
+    padding: 25px 15px
+    z-index: 2
+    position: relative
+    @media (min-width: 600px)
+        padding: 40px
+        max-width: 75%
+
+    p
+        margin-top: 0px
+        color: $darkestgreen
+        font-size: 1.1em
+        margin-bottom: 10px
+        @media (min-width: 800px)
+            font-size: 1.3em
+        a
+            color: $darkestgreen
+
+.page-header__pattern
+    position: absolute
+    bottom: 0px
+    right: 0px
+    transform: translate(70%, 50%)
+    z-index: 1
+    height: 110%
+
+.page-header--overlap
+    padding-bottom: 100px
+    margin-bottom: -90px
+    @media (min-width: 700px)
+        padding-bottom: 150px
+        margin-bottom: -120px    
+
+
+// Page navigation
+.page-navigation
+    background: $deepgreen
+    padding: 20px 0px
+
+.page-navigation__list
+	margin: 0
+	padding: 0
+	list-style-type: none
+	@media (min-width: 700px)
+		display: flex
+		flex-direction: row
+
+
+.page-navigation__list-item
+	display: inline-block
+	margin-right: 10px
+	padding-right: 10px
+	border-right: 1px solid transparentize(white, 0.5)
+	@media (min-width: 700px)
+		margin-right: 25px
+		padding-right: 25px
+		border-right: 1px solid transparentize(white, 0.5)
+	&:last-of-type
+		margin-right: 0px
+		padding-right: 0px
+		border-right: none
+
+.page-navigation__link
+	color: white
+	font-weight: bold
+	text-decoration: none
+	font-size: 1em
+	@media (min-width: 700px)
+		font-size: 1.3em
+
+
+// Panel
+.panel
+    background: white
+    padding: 20px
+
+
+// Section title
+.section-title
+    color: $darkestgreen
+    margin: 40px 0px 30px 0px
+
+// Button
+button, input[type=submit], .button
+    background: $deepgreen
+    color: white
+    border: none
+    width: 100%
+    font-size: 1.1em
+    letter-spacing: 1px
+    padding: 15px
+    position: relative
+    font-weight: bold
+    text-decoration: none
+    display: inline-block
+    text-align: center
+    @media (min-width: 600px)
+        width: initial
+        padding: 15px 25px
+        min-width: 150px
+    i
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+    &.button--with-icon
+        padding-right: 45px
+
+.button--secondary
+    background: none
+    color: $darkgreen
+    padding: 0px
+
+.button--start
+    &::after
+        position: absolute
+        right: 15px
+        top: 50%
+        transform: translateY(-50%)
+        font-family: "Font Awesome 5 Free"
+        content: '\f054'
+        font-weight: 900
+        opacity: 0.75
+        font-size: 0.8em    
+    @media (min-width: 600px)
+        padding: 15px 45px 15px 25px
+
+
+// Form inputs
+.form-field
+    margin: 25px 0px
+    @media (min-width: 600px)
+        margin: 30px 0px
+
+.form-label
+    margin-bottom: 5px
+    display: block
+    color: $darkestgreen
+    // font-weight: bold
+    font-size: 1.2em
+
+.content .form-hint
+    font-size: 0.9em
+    margin: 5px 0px
+
+.text-input, select
+    border: 1px solid $lightgrey
+    background: none
+    font-size: 1em
+    padding: 15px
+    width: 100%
+
+
+// Go back link
+.go-back
+    color: $darkgreen

@@ -1,145 +1,19 @@
-// Colour scheme
-$palegreen: #9ab4bb
-$coregreen: #84bd00
-$brightgreen: #25a076
-$darkgreen: #175e66
-$lightgrey: #eaeaea
-$deepgreen: #18a489
-
-$offwhite: #f4f7f8
-$darkblue: #115e67
-$darkgrey: #0f2522
-$lightblue: #42b4d6
-
-*
-    box-sizing: border-box
-    font-family: 'varah-regular'
-
-body
-    margin: 0
-    background: $lightgrey
-
-
-h1, h2, h3, h4, h5
-    font-family: 'varah-bold'
-
-.container
-    margin: 0 auto
-    max-width: 1000px
-    padding: 0 15px
-
-.visually-hidden
-    position: absolute
-    left: -9999em
-    top: auto
-    width: 1px
-    height: 1px
-    overflow: hidden
-    
-
-// Header
-.site-header
-    padding: 10px 0px
-    background: white
-
-.site-header__masthead .container
-    display: flex
-    width: 100%
-    flex-direction: row
-    justify-content: space-between
-
-.site-header__logo
-    width: 170px
-    max-width: 200px
-
-.site-header__user-profile
-    display: flex
-    flex-direction: row
-    align-items: center
-
-
-.site-header__user-avatar
-    width: 50px
-    max-width: 50px
-
-.site-header__user-popup
-    display: none
-
-.site-header__app-switcher
-    width: 35px
-    margin-left: 10px
-    @media (min-width: 700px)
-        margin-left: 30px
-
-
-// Phase banner
-.phase-banner
-    background-color: $offwhite
-    padding: 15px 0px 12px 0px
-
-.phase-banner__message
-    color: $darkgrey
-    display: flex
-    margin: 0px
-
-.phase-banner__tag
-    background-color: $lightblue
-    color: $offwhite
-    display: inline-block
-    padding: 2px 5px
-    margin-right: 10px
-    font-size: 0.95em
-    align-self: flex-start
-    transform: translateY(-2px)
+@import 'helpers'
 
 
 // Hero
 .hero
-    background-color: $darkgreen
-    color: $offwhite
-    width: 100vw
-    position: relative
-    left: 50%
-    right: 50%
-    margin-left: -50vw
-    margin-right: -50vw
-    margin-top: 0px
-    padding-top: 25px
-    padding-bottom: 25px
-    overflow: hidden
-    @media (min-width: 800px)
-        padding-top: 45px
-        padding-bottom: 45px
-
-    .page-title
-        font-size: 2em
-        margin-top: 0px
-        margin-bottom: 10px
+    .page-header__title
         max-width: 80%
-        z-index: 2
-        color: white
-        position: relative
         @media (min-width: 800px)
-            font-size: 3em
             max-width: 50%
-    .lede
-        font-size: 1.15em
+    .page-header__lede
         max-width: 80%
-        z-index: 2
-        color: white
-        position: relative
         @media (min-width: 800px)
-            font-size: 1.2em
             max-width: 50%
 
-    form
-        background: white
-        padding: 25px 15px
-        z-index: 2
-        position: relative
+    .page-header__panel
         @media (min-width: 600px)
-            padding: 40px
-            max-width: 75%
             display: flex
             flex-direction: row
             align-items: center
@@ -158,39 +32,50 @@ h1, h2, h3, h4, h5
             width: 100%
             flex: 1
 
-        button, input[type=submit]
-            background: $deepgreen
-            color: white
-            border: none
+        button
             width: 100%
-            font-size: 1.1em
-            letter-spacing: 1px
-            padding: 15px
-            position: relative
-            font-weight: bold
-            @media (min-width: 600px)
-                max-width: 170px
-                text-align: left
+            @media (min-width: 600px)  
+                max-width: 180px
+            
 
 
-            i
-                position: absolute
-                right: 15px
-                top: 50%
-                transform: translateY(-50%)
+// Key people
+.key-people, .all-people
+    padding: 25px 0px
+    @media (min-width: 800px)
+        padding: 40px 0px
 
-.hero__pattern
-    position: absolute
-    bottom: 0px
-    right: 0px
-    transform: translate(70%, 50%)
-    z-index: 1
-    height: 110%
+
+// User card
+.user-card
+    display: flex
+    flex-direction: row
+    div
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+.user-card__avatar
+    border-radius: 100%
+    margin-right: 20px
+    width: 100px
+    height: 100px
+    object-fit: cover
+
+.panel .user-card__name
+    display: inline-block
+    font-size: 1.1em
+    margin-bottom: 10px
+    font-weight: bold
+    a
+        color: $darkestgreen
+
 
 // Browse grid
 .browse
     padding-top: 25px
-    padding-bottom: 25px  
+    padding-bottom: 25px
     @media (min-width: 800px)
         padding-top: 50px
         padding-bottom: 50px  
@@ -198,50 +83,136 @@ h1, h2, h3, h4, h5
         list-style-type: none
         margin: 0
         padding: 0
-        @media (min-width: 800px)
-            display: grid
-            grid-template-columns: 1fr 1fr 1fr
-            grid-column-gap: 35px
-            grid-row-gap: 35px
-
 .panel
-    background: white
-    padding: 20px
     margin-bottom: 15px
     &:last-of-type
         margin-bottom: 0px
     @media (min-width: 800px)
         margin-bottom: 0px
-
     a
-        color: $darkgreen
         text-decoration: none
         h2
+            color: $darkgreen
             font-size: 1.2em
             margin: 0px
             margin-bottom: 15px
         i
             color: $lightblue
             margin-left: 5px
-
     p
         margin: 0px
-        color: $darkgrey
+        color: $darkgreen
 
 
-// Footer
-.site-footer
+// All people table
+
+.all-people
+    padding: 20px
     background: white
-    padding-top: 25px
-    padding-bottom: 25px      
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        padding: 40px
+        margin-bottom: 40px
 
-.site-footer__menu
-    list-style: none
-    margin: 0
-    padding: 0
+.table-controls
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    form
+        display: flex
+        flex-direction: row
+        align-items: center
+        label
+            margin-right: 10px
+        select
+            
+            margin-right: 10px
+    .volunteer-count
+        color: $darkgreen
+        font-style: italic
+        @media (min-width: 800px)
+            margin: 0
 
-    li
-        margin-bottom: 10px
+table
+    width: 100%
+    border-collapse: collapse
+    th
+        padding: 10px 0px
+        color: $darkgreen
+        text-align: left
+
+    td
+        color: $darkgreen
+        padding: 10px 0px
         a
             color: $darkgreen
-            text-decoration: none
+    
+    .fa-check
+        background: $deepgreen
+        color: white
+        font-size: 0.9em
+        border-radius: 100%
+        padding: 5px
+
+    tr
+        border-bottom: 1px solid $lightgrey
+
+    
+
+.course-choices
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        margin-bottom: 40px
+
+.course-choice
+    background: white
+    padding: 20px
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        padding: 40px
+
+    h2
+        color: $darkestgreen
+        i
+            color: $lightblue
+            margin-left: 10px
+
+.course-dates
+    padding: 20px
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        padding: 40px
+        margin-bottom: 40px
+
+    table
+        margin-bottom: 20px
+        @media (min-width: 800px)
+            margin-bottom: 40px
+        td
+            padding: 15px 0px
+
+
+.modules
+    background: white
+    // padding: 20px
+    margin-bottom: 20px
+    @media (min-width: 800px)
+        // padding: 40px
+        margin-bottom: 60px
+
+    table
+        border: 1px solid $lightgrey
+        tr
+            border: 2px solid $lightgrey
+        td
+            padding: 25px
+            &:nth-of-type(2)
+                font-weight: bold
+                color: $darkestgreen
+        &.upcoming
+            tr:first-of-type
+                td
+                    font-size: 1.3em

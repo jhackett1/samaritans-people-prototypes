@@ -1,71 +1,85 @@
 {% extends '_layout.html' %}
 {% block content %}
 
-<p class="page-context">Search results for:</p>
-<form action="/results">
-    <label class="visually-hidden" for="query">Search query</label>
-    <input id="query" type="text" class="text-input" placeholder="Search for people or branches"/>
-    <button class="button">Search</button>
-</form>
+<section class="page-header hero">
+    <img class="page-header__pattern" src="/pattern.svg"/>
+    <div class="container">
+        <p class="page-header__lede">Search results for:</p>
+        <form class="page-header__panel" action="/results">
+            <label class="visually-hidden" for="query">Search query</label>
+            <div class="form-input">
+                <input id="query" type="text" placeholder="Search for people or branches"/>
+            </div>
+            <button class="button button--start">Search <i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</section>
 
-<h2>Matching people</h2>
+<main class="container">
+    
+    <h2 class="section-title">Matching people</h2>
+    <section id="all-people" class="all-people">                
+        <table class="volunteers-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Role</th>
+                    <th>Phone number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="/fiona-morris">Fiona Morris</a></td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Branch volunteer</td>
+                    <td>Birmingham</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Namey McName</a></td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Director</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#">John Volunteer</a></td>
+                    <td><i class="fas fa-check"></i></td>
+                    <td>Listening volunteer</td>
+                    <td>0755 555 5555</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-<table class="volunteers-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Role</th>
-            <th>Phone number</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="#">Namey McName</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Director</td>
-            <td>Birmingham</td>
-        </tr>
-        <tr>
-            <td><a href="#">John Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Listening volunteer</td>
-            <td>Aberdeen</td>
-        </tr>
-        <tr>
-            <td><a href="/jane-volunteer">Jane Volunteer</a></td>
-            <td><i class="fas fa-check"></i></td>
-            <td>Deputy director, recruitment</td>
-            <td>Solihull</td>
-        </tr>
-    </tbody>
-</table>
+
+    <h2 class="section-title">Matching branches</h2>
+    <section id="all-people" class="all-people">                
+        <table class="volunteers-table">
+                <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Region</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/birmingham-branch">Birmingham</a></td>
+                            <td>Midlands</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/birmingham-branch">Solihull</a></td>
+                            <td>Midlands</td>
+                        </tr>
+                        <tr>
+                            <td><a href="/birmingham-branch">Lichfield</a></td>
+                            <td>Midlands</td>
+                        </tr>
+                    </tbody>
+        </table>
+    </section>
 
 
+</main>
 
-<h2>Matching branches</h2>
-
-<table class="volunteers-table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Region</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="/birmingham-branch">Birmingham</a></td>
-            <td>Midlands</td>
-        </tr>
-        <tr>
-            <td><a href="/birmingham-branch">Solihull</a></td>
-            <td>Midlands</td>
-        </tr>
-        <tr>
-            <td><a href="/birmingham-branch">Lichfield</a></td>
-            <td>Midlands</td>
-        </tr>
-    </tbody>
-</table>
 
 {% endblock %}

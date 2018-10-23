@@ -1,0 +1,46 @@
+{% extends '../_layout.html' %}
+{% block content %}
+
+<section class="page-header page-header--overlap">
+        <img class="page-header__pattern" src="/pattern.svg"/>
+        <div class="container">
+            <p class="page-header__context">Enroll on training</p>
+            <h1 class="page-header__title">Choose your course type</h1>
+        </div>
+    </section>
+
+<main class="content content--transparent container">
+    <div class="course-choices grid-2-columns">
+
+            <aside class="course-choice">
+                <h2>Weekly sessions<i class="fas fa-chevron-right"></i></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, feugiat auctor, tortor orci laoreet odio.</p>
+
+                <p>Et accumsan nisl sapien ut elit. Donec.</p>
+                <ul>
+                    <li>Elit. Curabitur hendrerit</li>
+                    <li>Consectetur adipiscing elit. Curabitur.</li>
+                    <li>Consectetur adipiscing elit. Curabitur hendrerit</li>
+                </ul>
+                <a href="/enroll/choose-dates" class="button">Choose weekly sessions</a>
+            </aside>
+
+            <aside class="course-choice">
+                <h2>Intensive course<i class="fas fa-chevron-right"></i></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, ligula cursus feugiat auctor</p>
+                <p>Tortor orci laoreet odio.</p>
+                <p>Et accumsan nisl sapien ut elit. Donec.</p>
+                <ul>
+                    <li>Elit. Curabitur hendrerit</li>
+                    <li>Consectetur adipiscing elit. Curabitur.</li>
+                    <li>Consectetur adipiscing elit. Curabitur hendrerit</li>
+                </ul>
+                <a href="/enroll/choose-dates" class="button">Choose an intensive course</a>
+            </aside>
+
+        </div>
+</main>
+
+
+
+{% endblock %}
