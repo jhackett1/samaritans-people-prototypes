@@ -210,6 +210,9 @@ table {
     .course-dates table td {
       padding: 15px 0px; }
 
+.upcoming-sessions-title {
+  margin-top: 60px; }
+
 .modules {
   background: white;
   margin-bottom: 20px; }
