@@ -6,22 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Samaritans People | Samaritans prototyping kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/client.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/fonts/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/general.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="/custom.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="/client.js"></script>
 </head>
-<body>
+<body class="{% block bodyClass %}{% endblock%}">
     <header class="site-header site-header--dark site-">
         <div class="site-header__masthead site-header__masthead--with-profile">
             <div class="container">
                     <a class="site-header__logo-holder" href="/">
-                        <span class="site-header__service-name">Samaritans People</span>
+                        <img class="site-header__logo" src="/logo.svg"/>
+                        {# <span class="site-header__service-name">Samaritans People</span> #}
                     </a>
 
                     <div class="site-header__user-profile">
-                        <a href="#" class="site-header__user-link"><img class="site-header__user-avatar" src="https://placeimg.com/100/100/people"/></a>
-                    
+                        <a href="#" class="site-header__user-link"><img class="site-header__user-avatar" src="/user.svg"/></a>
                         <div class="site-header__user-popup">
                             <h3>Namey McName</h3>
                             <p><small><span class="tag">Trainer</span> Birmingham branch</small></p>
@@ -30,7 +31,7 @@
                                 <p><a href="#">Sign out</a></p>
                             </div>
                         </div>
-                    
+                        <a href="#" class="site-header__app-switcher-link"><img class="site-header__app-switcher" src="/app-switcher.svg"/></a>
                     </div>
 
             </div>
@@ -74,7 +75,7 @@
                 <li><a href="#" class="site-footer__menu-link">Legal</a></li> #}
             </ul>
             <p class="site-footer__legal">
-                Samaritans is a charity registered in England and Wales (219432) and in Scotland (SC040604) and incorporated in England and Wales as a company limited by guarantee (757372). Samaritans Ireland is a charity registered in the Republic of Ireland (20033668) and incorporated in the Republic of Ireland as a company limited by guarantee (450409). Samaritans in Scotland is a charity registered in Scotland (SC009843) and incorporated as a Scottish Charitable Incorporated Organisation.
+                &copy; Samaritans 2018
             </p>
         </div>
     </footer>

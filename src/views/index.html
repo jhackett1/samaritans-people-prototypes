@@ -1,5 +1,6 @@
 {% extends '_layout.html' %}
 {% block phaseClass %}phase-banner--transparent{% endblock%}
+{% block bodyClass %}home{% endblock%}
 {% block content %}
 
 {% include 'partials/hero.html' %}
@@ -8,17 +9,17 @@
     <ul class="grid-3-columns">
 
         <li class="panel">
-            <a href="/birmingham-branch"><h2>My branch</h2></a>
+            <a href="/birmingham-branch"><h2>My branch<i class="fas fa-chevron-right"></i></h2></a>
             <p>See key people at your branch</p>
         </li>
 
         <li class="panel">
-            <a href="/all-people"><h2>Browse people</h2></a>
+            <a href="/all-people"><h2>Browse people<i class="fas fa-chevron-right"></i></h2></a>
             <p>See all people and filter by branch or role</p>
         </li>
 
         <li class="panel">
-            <a href="/all-branches"><h2>Browse branches</h2></a>
+            <a href="/all-branches"><h2>Browse branches<i class="fas fa-chevron-right"></i></h2></a>
             <p>See all branches and filter by region</p>
         </li>
 

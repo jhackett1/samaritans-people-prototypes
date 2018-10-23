@@ -1,13 +1,17 @@
 <section class="hero">
-    <div class="grid-3-columns container">
-        <div class="main-content">
+    <img class="hero__pattern" src="/pattern.svg"/>
+
+    <div class="container">
+
             <h1 class="page-title">Welcome to Samaritans People</h1>
             <p class="lede">Manage your own details and search for other volunteers by branch, name or role</p>
             <form action="/results">
                 <label class="visually-hidden" for="query">Search query</label>
-                <input id="query" type="text" placeholder="Search for people or branches"/>
-                <button class="button button--start">Search</button>
+                <div class="form-input">
+                    <input id="query" type="text" placeholder="Search for people or branches"/>
+                </div>
+                <button class="button button--start">Search <i class="fas fa-search"></i></button>
             </form>
-        </div>
+
     </div>
 </section>
