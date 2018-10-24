@@ -1,5 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const basicAuth = require('express-basic-auth')
 const utils = require('./utils')
 
 const server = express()
@@ -10,6 +11,13 @@ nunjucks.configure('./src/views', {
   watch: true
 });
 server.set('view engine', 'html');
+
+if(process.env.NODE_ENV == 'production'){
+  server.use(basicAuth({
+    challenge: true,
+    users: { [process.env.USERNAME]: process.env.PASSWORD }
+  }))
+}
 
 // Auto-render any view file that exists
 server.get(/^([^.]+)$/, function (req, res, next) {
